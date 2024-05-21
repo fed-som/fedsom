@@ -1,0 +1,59 @@
+
+
+dataset: slmnist
+data_class: SLMNISTDataset
+
+training_params:
+  optimizer:
+    loss_algo: vicreg_only
+    loss_weight: 0.0003035893326985313
+  encoder:
+    embedding_dim: 2
+    representation_dim: 359
+    final_dim: 39
+    temp: 0.20274450216285242
+    sparsity_thresh: 0.02464804565591919
+    approx_constant_thresh: 0.6638600632932369
+    corruption_factor: 0.08747971307022431
+    sample_prior: 0.08996795833379781
+    learning_rate_enc: 0.0012272884486282149
+    scheduler_gamma: 0.9585992941052792
+    num_epochs: 500
+    batch_size: 8
+    # coarseness: 100
+    vicreg_weight: 66
+    zeta: 1.0866556422271068
+    perturb_both: True
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.772846929418836
+    sigma: 0.35360488189862227
+    num_epochs_som: 4
+    cosine: False
+
+paths:
+  train_data_path: '../../../sandbox/data/slmnist/sign_mnist_train.csv'
+  test_data_path: '../../../sandbox/data/slmnist/sign_mnist_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

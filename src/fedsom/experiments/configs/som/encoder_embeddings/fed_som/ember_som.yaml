@@ -1,0 +1,45 @@
+
+
+dataset: ember
+som_type: fed_som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 6
+  parallel: False
+
+som_params:
+  grid_edge_length: 9
+  grid_dim: 2
+  learning_rate: 0.09484828957971934
+  sigma: 0.47340593231461553
+  num_epochs_som: 5
+
+fedsom_params:
+  meta_grid_edge_length: 5
+  meta_grid_dim: 3
+  meta_learning_rate: 0.5397861454716776
+  meta_sigma: 0.5242906329427146
+  num_epochs_meta: 5
+  num_soms: 3
+
+paths:
+  # train_data_path: '../../../sandbox/data/ember/top_k/embeddings/ember_top_10_train_embeddings.csv'
+  # test_data_path: '../../../sandbox/data/ember/top_k/embeddings/ember_top_10_test_embeddings.csv'
+
+  train_data_path: '../../../sandbox/data/ember/top_k/embeddings/ember_train_encoder_embeddings.csv'
+  test_data_path: '../../../sandbox/data/ember/top_k/embeddings/ember_test_encoder_embeddings.csv'
+
+
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 10
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

@@ -1,0 +1,59 @@
+
+
+dataset: cifar
+data_class: CIFAR10Dataset
+
+training_params:
+  optimizer:
+    loss_algo: contrastive_vicreg
+    loss_weight: 0.0002318864986526263
+  encoder:
+    embedding_dim: 4
+    representation_dim: 171
+    final_dim: 13
+    temp: 0.18018508246328496
+    sparsity_thresh: 0.6552987946218473
+    approx_constant_thresh: 0.8618796259401154
+    corruption_factor: 0.055324242370521234
+    sample_prior: 0.05473766741138367
+    learning_rate_enc: 2.5230742231102376e-05
+    scheduler_gamma: 0.9740817779975969
+    num_epochs: 100
+    batch_size: 5
+    # coarseness: 100
+    vicreg_weight: 86
+    zeta: 6.180394539397274
+    perturb_both: False
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.2875453008874261
+    sigma: 0.5006481087237282
+    num_epochs_som: 1
+    cosine: False
+
+paths:
+  train_data_path: '../../../sandbox/data/cifar10/cifar10_train.csv'
+  test_data_path: '../../../sandbox/data/cifar10/cifar10_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

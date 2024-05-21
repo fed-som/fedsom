@@ -1,0 +1,59 @@
+
+
+dataset: syscalls
+data_class: SysCalls
+
+training_params:
+  optimizer:
+    loss_algo: c3_loss
+    loss_weight: 0.0003286015976884614
+  encoder:
+    embedding_dim: 4
+    representation_dim: 284
+    final_dim: 22
+    temp: 0.5000020389534782
+    sparsity_thresh: 0.29065097141314133
+    approx_constant_thresh: 0.7269419918532364
+    corruption_factor: 0.7149147105809499
+    sample_prior: 0.2751342805275273
+    learning_rate_enc: 0.00042506550395198043
+    scheduler_gamma: 0.9068047624951547
+    num_epochs: 5
+    batch_size: 8
+    # coarseness: 1
+    vicreg_weight: 81
+    zeta: 0.9767167046901163
+    perturb_both: False
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.10223320834129439
+    sigma: 0.5777451044203488
+    num_epochs_som: 4
+    cosine: False
+
+paths:
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICMalDroid2020/total/feature_vectors_syscalls_frequency_5_Cat_train.csv'
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICMalDroid2020/total/feature_vectors_syscalls_frequency_5_Cat_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

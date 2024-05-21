@@ -1,0 +1,59 @@
+
+
+dataset: notmnist
+data_class: NotMNISTDataset
+
+training_params:
+  optimizer:
+    loss_algo: vicreg_only
+    loss_weight: 0.015034988436601492
+  encoder:
+    embedding_dim: 5
+    representation_dim: 345
+    final_dim: 31
+    temp: 8.564614288200492
+    sparsity_thresh: 0.0026569811603323014
+    approx_constant_thresh: 0.8088532599258995
+    corruption_factor: 0.13697254564221945
+    sample_prior: 0.010550402513178259
+    learning_rate_enc: 0.0009533376965810577
+    scheduler_gamma: 0.9806314613614228
+    num_epochs: 500
+    batch_size: 8
+    # coarseness: 50
+    vicreg_weight: 55
+    zeta: 7.1411499023751
+    perturb_both: True
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.029130592213254033
+    sigma: 0.38742890978906547
+    num_epochs_som: 3
+    cosine: Euclidean
+
+paths:
+  train_data_path: '../../../sandbox/data/notmnist/not_mnist_train.csv'
+  test_data_path: '../../../sandbox/data/notmnist/not_mnist_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+
+
+dataset: fashionmnist
+data_class: FashionMNISTDataset
+
+training_params:
+  optimizer:
+    loss_algo: contrastive_vicreg
+    loss_weight: 0.0020652825570818194
+  encoder:
+    embedding_dim: 6
+    representation_dim: 368
+    final_dim: 13
+    temp: 0.11110647434216625
+    sparsity_thresh: 0.0010005270210624358
+    approx_constant_thresh: 0.6180055183835294
+    corruption_factor: 0.04957843899506445
+    sample_prior: 0.18598081221793536
+    learning_rate_enc: 3.772549310294401e-05
+    scheduler_gamma: 0.9381586341356485
+    num_epochs: 100
+    batch_size: 8
+    # coarseness: 25
+    vicreg_weight: 81
+    zeta: 0.4578508324463431
+    perturb_both: False
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.03467472845658276
+    sigma: 0.2929017873135855
+    num_epochs_som: 3
+    cosine: Euclidean
+
+paths:
+  train_data_path: '../../../sandbox/data/fashion_mnist/fashion_mnist_train.csv'
+  test_data_path: '../../../sandbox/data/fashion_mnist/fashion_mnist_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

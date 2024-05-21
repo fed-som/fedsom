@@ -1,0 +1,45 @@
+
+
+dataset: chars74k
+som_type: fed_som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 8
+  parallel: False
+
+som_params:
+  grid_edge_length: 7
+  grid_dim: 2
+  learning_rate: 0.11336346772165831
+  sigma: 0.517551831977733
+  num_epochs_som: 5
+
+fedsom_params:
+  meta_grid_edge_length: 4
+  meta_grid_dim: 3
+  meta_learning_rate: 0.8443551595367194
+  meta_sigma: 0.68850487107252
+  num_epochs_meta: 5
+  num_soms: 3
+
+paths:
+  # train_data_path: '../../../sandbox/data/chars74k/embeddings/chars74k_coarse_vectors_normalized_train_embeddings.csv'
+  # test_data_path: '../../../sandbox/data/chars74k/embeddings/chars74k_coarse_vectors_normalized_test_embeddings.csv'
+
+  train_data_path: '../../../sandbox/data/chars74k/embeddings/chars74k_train_encoder_embeddings.csv'
+  test_data_path: '../../../sandbox/data/chars74k/embeddings/chars74k_test_encoder_embeddings.csv'
+
+
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 1000
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

@@ -1,0 +1,31 @@
+
+
+dataset: fashionmnist
+data_class: FashionMNISTDatasetInMem
+
+training_params:
+  encoder_params: 
+    approx_constant_thresh: 0.8816319830475617
+  umap:
+    numerical:
+      n_neighbors: 15
+      n_components: 155
+      min_dist: 6.407471583454287e-05
+      init: random
+      metric: cosine
+    categorical:  
+    combo:
+
+paths:
+  train_data_path: '../../../sandbox/data/fashion_mnist/fashion_mnist_train.csv'
+  test_data_path: '../../../sandbox/data/fashion_mnist/fashion_mnist_test.csv'
+
+  train_embeddings_path: '../../../sandbox/data/fashion_mnist/embeddings/fashion_mnist_train_embeddings.csv'
+  test_embeddings_path: '../../../sandbox/data/fashion_mnist/embeddings/fashion_mnist_test_embeddings.csv'
+
+num_samples_train: 100000000
+num_samples_test: 100000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True

@@ -1,0 +1,59 @@
+
+
+dataset: kuz
+data_class: KuzushijiDataset
+
+training_params:
+  optimizer:
+    loss_algo: vicreg_only
+    loss_weight: 0.0011573684871921304
+  encoder:
+    embedding_dim: 4
+    representation_dim: 59
+    final_dim: 29
+    temp: 0.7243779894688739
+    sparsity_thresh: 0.04900139191196239
+    approx_constant_thresh: 0.8835070238680984
+    corruption_factor: 0.6004473235937556
+    sample_prior: 0.01784318696520569
+    learning_rate_enc: 0.005926326391143554
+    scheduler_gamma: 0.9651389545425014
+    num_epochs: 500
+    batch_size: 8
+    # coarseness: 75
+    vicreg_weight: 14
+    zeta: 0.8755208325516701
+    perturb_both: False
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 2
+    learning_rate_som: 0.09205532385259488
+    sigma: 0.27095299585692445
+    num_epochs_som: 2
+    cosine: Euclidean
+
+paths:
+  train_data_path: '../../../sandbox/data/kuzushiji_data/kuzushiji_mnist_normalized_train.csv'
+  test_data_path: '../../../sandbox/data/kuzushiji_data/kuzushiji_mnist_normalized_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

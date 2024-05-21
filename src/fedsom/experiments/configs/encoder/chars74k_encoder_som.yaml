@@ -1,0 +1,59 @@
+
+
+dataset: chars74k
+data_class: Chars74kDataset
+
+training_params:
+  optimizer:
+    loss_algo: contrastive_only
+    loss_weight: 0.0004460298917941345
+  encoder:
+    embedding_dim: 2
+    representation_dim: 108
+    final_dim: 38
+    temp: 0.2209508016102823
+    sparsity_thresh: 0.17922725166580533
+    approx_constant_thresh: 0.8768864965711779
+    corruption_factor: 0.6350218111828375
+    sample_prior: 0.13806824893046343
+    learning_rate_enc: 0.0005567924202653551
+    scheduler_gamma: 0.9528583662066819
+    num_epochs: 16
+    batch_size: 4
+    # coarseness: 25
+    vicreg_weight: 17
+    zeta: 0.43142324280495636
+    perturb_both: True
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.996815290566505
+    sigma: 0.4923622855961873
+    num_epochs_som: 5
+    cosine: True
+
+paths:
+  train_data_path: '../../../sandbox/data/chars74k/chars74k_coarse_vectors_normalized_train.csv'
+  test_data_path: '../../../sandbox/data/chars74k/chars74k_coarse_vectors_normalized_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+
+
+dataset: kuz
+som_type: fed_som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 2
+  parallel: False
+
+som_params:
+  grid_edge_length: 8
+  grid_dim: 2
+  learning_rate: 0.6832746932364082
+  sigma: 0.35741461900908633
+  num_epochs_som: 5
+
+fedsom_params:
+  meta_grid_edge_length: 2
+  meta_grid_dim: 2
+  meta_learning_rate: 1.3651096227261281
+  meta_sigma: 0.47583551887050246
+  num_epochs_meta: 5
+  num_soms: 4
+
+paths:
+  train_data_path: '../../../sandbox/data/kuzushiji_data/embeddings/kuzushiji_mnist_normalized_train_embeddings.csv'
+  test_data_path: '../../../sandbox/data/kuzushiji_data/embeddings/kuzushiji_mnist_normalized_test_embeddings.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 1000
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

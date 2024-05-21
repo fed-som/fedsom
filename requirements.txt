@@ -1,0 +1,24 @@
+networkx
+hdbscan
+umap-learn
+welford
+plotly
+kaleido
+optuna
+pyclustering
+imageio
+scikit-learn
+torch<2.0.0
+torchvision
+pydantic
+pyyaml
+ipython
+pyarrow
+numpy
+pandas  
+pathlib
+typing
+scipy # version is often a problem on ec2, don't pin 1.5.4
+seaborn
+matplotlib #==3.3.4 
+joblib==1.1.0

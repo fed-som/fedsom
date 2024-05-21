@@ -1,0 +1,59 @@
+
+
+dataset: cicandmal2017
+data_class: CICAndMal2017
+
+training_params:
+  optimizer:
+    loss_algo: c3_loss
+    loss_weight: 0.00023215714343862158
+  encoder:
+    embedding_dim: 3
+    representation_dim: 280
+    final_dim: 37
+    temp: 1.2862530660466467
+    sparsity_thresh: 0.007759872283382355
+    approx_constant_thresh: 0.6271771358404379
+    corruption_factor: 0.08327831544784597
+    sample_prior: 0.4166315849467574
+    learning_rate_enc: 0.02411217545218083
+    scheduler_gamma: 0.921490634206369
+    num_epochs: 5
+    batch_size: 4
+    # coarseness: 50
+    vicreg_weight: 85
+    zeta: 0.23197229141424414
+    perturb_both: False
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.19858205416959088
+    sigma: 0.5200242969251612
+    num_epochs_som: 5
+    cosine: True
+
+paths:
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICAndMal2017/total/cic_andmal2017_train_converted.csv'
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICAndMal2017/total/cic_andmal2017_test_converted.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

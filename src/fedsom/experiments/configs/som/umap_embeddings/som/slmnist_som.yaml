@@ -1,0 +1,34 @@
+
+# 24
+
+
+dataset: slmnist
+som_type: som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 6
+  parallel: False
+
+som_params:
+  grid_edge_length: 10
+  grid_dim: 3
+  learning_rate: 1.1675652715221916
+  sigma: 0.3415158793394196
+  num_epochs_som: 5
+
+paths:
+  train_data_path: '../../../sandbox/data/slmnist/embeddings/sign_mnist_train_embeddings.csv'
+  test_data_path: '../../../sandbox/data/slmnist/embeddings/sign_mnist_test_embeddings.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 100
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

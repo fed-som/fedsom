@@ -1,0 +1,31 @@
+
+
+dataset: kuz
+data_class: KuzushijiInMem
+
+training_params:
+  encoder_params: 
+    approx_constant_thresh: 0.9628571968732796
+  umap:
+    numerical:
+      n_neighbors: 20
+      n_components: 157
+      min_dist: 1.811717173843806e-06
+      init: random
+      metric: cosine
+    categorical:  
+    combo:
+
+paths:
+  train_data_path: '../../../sandbox/data/kuzushiji_data/kuzushiji_mnist_normalized_train.csv'
+  test_data_path: '../../../sandbox/data/kuzushiji_data/kuzushiji_mnist_normalized_test.csv'
+  
+  train_embeddings_path: '../../../sandbox/data/kuzushiji_data/embeddings/kuzushiji_mnist_normalized_train_embeddings.csv'
+  test_embeddings_path: '../../../sandbox/data/kuzushiji_data/embeddings/kuzushiji_mnist_normalized_test_embeddings.csv'
+
+num_samples_train: 100000000
+num_samples_test: 100000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True

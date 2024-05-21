@@ -1,0 +1,41 @@
+
+
+dataset: sorel
+data_class: SorelDatasetInMem
+
+training_params:
+  encoder_params: 
+    approx_constant_thresh: 0.8222024448694538
+  umap:
+    numerical:
+      n_neighbors: 60
+      n_components: 9
+      min_dist: 5.666070271616991e-05
+      init: spectral
+      metric: euclidean
+    categorical: 
+      n_neighbors: 17
+      n_components: 12
+      min_dist: 4.887417452547029e-05
+      init: random
+      metric: dice 
+    combo:
+      n_neighbors: 89
+      n_components: 74
+      min_dist: 1.2412142298660335e-05
+      init: spectral
+      metric: euclidean
+
+paths:
+  train_data_path: '../../../sandbox/data/sorel/sorel_subset_train.csv'
+  test_data_path: '../../../sandbox/data/sorel/sorel_subset_test.csv'
+
+  train_embeddings_path: '../../../sandbox/data/sorel/embeddings/sorel_subset_train_embeddings.csv'
+  test_embeddings_path: '../../../sandbox/data/sorel/embeddings/sorel_subset_test_embeddings.csv'
+
+num_samples_train: 100000000
+num_samples_test: 1000000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True

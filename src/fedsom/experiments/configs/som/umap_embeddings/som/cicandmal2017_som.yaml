@@ -1,0 +1,40 @@
+
+
+dataset: cicandmal2017
+som_type: som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 2
+  batch_size: 4
+  parallel: False
+
+som_params:
+  grid_edge_length: 2
+  grid_dim: 2
+  learning_rate: 0.001
+  sigma: 0.01
+  num_epochs_som: 2
+
+# fedsom_params:
+#   meta_grid_edge_length: 2
+#   meta_grid_dim: 2
+#   meta_learning_rate: 0.01
+#   meta_sigma: 0.01
+#   num_epochs_meta: 2
+#   num_soms: 3
+
+paths:
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICAndMal2017/total/embeddings/cic_andmal2017_train_embeddings_.csv'
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICAndMal2017/total/embeddings/cic_andmal2017_test_embeddings_.csv'
+
+num_samples_train: 1000
+num_samples_test: 1000
+num_samples_render: 2500
+num_pairs_interpolate: 100
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

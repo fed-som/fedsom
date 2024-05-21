@@ -1,0 +1,2 @@
+
+aws s3 --region us-west-2 --no-sign-request ls s3://sorel-20m/09-DEC-2020/lightGBM-features/

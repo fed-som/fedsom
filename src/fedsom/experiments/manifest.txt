@@ -1,0 +1,11 @@
+
+
+1. optuna_umap_hdbscan.py to hyperparameter search for umap parameters (10k samples)
+2. optuna_encoder_som.py to hyperparameter search for encoder parameters (10k samples)
+3. single_umap_hdbscan.py to create optimal encodings for all datasets 
+4. single_encoder_som.py to create optimal encodings for all datasets 
+5. optuna_som.py to hyperparameter search for optimal som parameters 
+6. optuna_som.py to hyperparameter search for optimal fed_som parameters
+7. single_train_som.py to find optimal som for each dataset (train on everything)
+8. single_train_som.py to find optimal fed_som for each dataset (train on everything)
+9. cluster_and_interpolate.py to cluster and create interpolations for som and fed_som for each dataset

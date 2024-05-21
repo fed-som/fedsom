@@ -1,0 +1,37 @@
+
+# 10 
+
+dataset: mnist
+som_type: som
+data_class: EmbeddingsDataset
+original_data_class: MNISTDataset
+mnist_like: True
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 6
+  parallel: False
+
+som_params:
+  grid_edge_length: 4
+  grid_dim: 3
+  learning_rate: 0.04708420520106523
+  sigma: 0.5823978405715615
+  num_epochs_som: 5
+
+paths:
+  train_data_path: '../../../sandbox/data/mnist_data/embeddings/mnist_train_embeddings.csv'
+  test_data_path: '../../../sandbox/data/mnist_data/embeddings/mnist_test_embeddings.csv'
+  original_train_data_path: '../../../sandbox/data/mnist_data/mnist_train.csv'
+  original_test_data_path: '../../../sandbox/data/mnist_data/mnist_test.csv'
+
+num_samples_train: 1000000
+num_samples_test: 1000000
+num_samples_render: 2500
+num_pairs_interpolate: 100
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

@@ -1,0 +1,59 @@
+
+
+dataset: mnist
+data_class: MNISTDataset
+
+training_params:
+  optimizer:
+    loss_algo: vicreg_only
+    loss_weight: 0.01128700472095087
+  encoder:
+    embedding_dim: 4
+    representation_dim: 372
+    final_dim: 28
+    temp: 4.709870013424762
+    sparsity_thresh: 0.01069835978604923
+    approx_constant_thresh: 0.8522573737418744
+    corruption_factor: 0.021144995024483092
+    sample_prior: 0.7583386595768098
+    learning_rate_enc: 0.0010382922012401612
+    scheduler_gamma: 0.904545223245677
+    num_epochs: 50
+    batch_size: 7
+    # coarseness: 25
+    vicreg_weight: 88
+    zeta: 0.2859661530625438
+    perturb_both: True
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 0.093202063810955
+    sigma: 0.30457685369521953
+    num_epochs_som: 5
+    cosine: Euclidean
+
+paths:
+  train_data_path: '../../../sandbox/data/mnist_data/mnist_train.csv'
+  test_data_path: '../../../sandbox/data/mnist_data/mnist_test.csv'
+
+num_samples_train: 1000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

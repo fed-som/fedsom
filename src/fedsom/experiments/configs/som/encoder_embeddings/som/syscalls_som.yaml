@@ -1,0 +1,36 @@
+
+
+dataset: syscalls
+som_type: som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 3
+  parallel: False
+
+som_params:
+  grid_edge_length: 8
+  grid_dim: 3
+  learning_rate: 0.13934158514598138
+  sigma: 0.49139824637509055
+  num_epochs_som: 5
+
+paths:
+  # train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICMalDroid2020/total/embeddings/feature_vectors_syscalls_frequency_5_Cat_train_embeddings.csv'
+  # test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICMalDroid2020/total/embeddings/feature_vectors_syscalls_frequency_5_Cat_test_embeddings.csv'
+
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICMalDroid2020/total/embeddings/syscalls_test_encoder_embeddings.csv'
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CICMalDroid2020/total/embeddings/syscalls_train_encoder_embeddings.csv'
+
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 100
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

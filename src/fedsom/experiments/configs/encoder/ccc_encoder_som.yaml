@@ -1,0 +1,59 @@
+
+
+dataset: ccc
+data_class: CCCS
+
+training_params:
+  optimizer:
+    loss_algo: vicreg_only
+    loss_weight: 0.022101518146713597
+  encoder:
+    embedding_dim: 6
+    representation_dim: 158
+    final_dim: 38
+    temp: 0.7120418416737712
+    sparsity_thresh: 0.027219132447665984
+    approx_constant_thresh: 0.9507862929084308
+    corruption_factor: 0.07804940011879834
+    sample_prior: 0.23276466581652577
+    learning_rate_enc: 1.596850994024006e-05
+    scheduler_gamma: 0.9273633870066447
+    num_epochs: 5
+    batch_size: 4
+    # coarseness: 75
+    vicreg_weight: 21
+    zeta: 2.8926056520095247
+    perturb_both: True
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 1.5855162473405113
+    sigma: 0.3390923631892498
+    num_epochs_som: 4
+    cosine: True
+
+paths:
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CCCS-CIC-AndMal2020/total/cccs_cic_andmal2020_train.csv'
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/CCCS-CIC-AndMal2020/total/cccs_cic_andmal2020_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+
+
+dataset: sorel
+data_class: SorelDataset
+
+training_params:
+  optimizer:
+    loss_algo: contrastive_vicreg
+    loss_weight: 0.00012635258323622116
+  encoder:
+    embedding_dim: 4
+    representation_dim: 207
+    final_dim: 15
+    temp: 0.17142557781774578
+    sparsity_thresh: 0.30984360528577004
+    approx_constant_thresh: 0.7115616299310714
+    corruption_factor: 0.6518637302261897
+    sample_prior: 0.023408291582785165
+    learning_rate_enc: 0.0001586417067515354
+    scheduler_gamma: 0.9213176174768586
+    num_epochs: 5
+    batch_size: 4
+    # coarseness: 25
+    vicreg_weight: 55
+    zeta: 0.7552283114116862
+    perturb_both: True
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 3
+    learning_rate_som: 1.7934486337865287
+    sigma: 0.44233560483194256
+    num_epochs_som: 3
+    cosine: True
+
+paths:
+  train_data_path: '../../../sandbox/data/sorel/sorel_subset_train.csv'
+  test_data_path: '../../../sandbox/data/sorel/sorel_subset_test.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+
+
+dataset: sorel
+som_type: fed_som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 4
+  parallel: False
+
+som_params:
+  grid_edge_length: 6
+  grid_dim: 2
+  learning_rate: 2.048319965306009
+  sigma: 0.46401415157173925
+  num_epochs_som: 5
+
+fedsom_params:
+  meta_grid_edge_length: 7
+  meta_grid_dim: 3
+  meta_learning_rate: 0.37428542083907007
+  meta_sigma: 0.8095094698454737
+  num_epochs_meta: 5
+  num_soms: 4
+
+paths:
+  train_data_path: '../../../sandbox/data/sorel/embeddings/sorel_subset_train_embeddings.csv'
+  test_data_path: '../../../sandbox/data/sorel/embeddings/sorel_subset_test_embeddings.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 1000
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

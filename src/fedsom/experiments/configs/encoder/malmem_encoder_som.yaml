@@ -1,0 +1,59 @@
+
+
+dataset: malmem
+data_class: MalMem
+
+training_params:
+  optimizer:
+    loss_algo: contrastive_only
+    loss_weight: 0.34305348646618034
+  encoder:
+    embedding_dim: 5
+    representation_dim: 243
+    final_dim: 33
+    temp: 1.1048270653924228
+    sparsity_thresh: 0.5078146448272495
+    approx_constant_thresh: 0.6236356462694265
+    corruption_factor: 0.015153880601344682
+    sample_prior: 0.03981874941454485
+    learning_rate_enc: 2.857178986934485e-05
+    scheduler_gamma: 0.9812977783631073
+    num_epochs: 5
+    batch_size: 4
+    # coarseness: 50
+    vicreg_weight: 63
+    zeta: 1.2450084866814966
+    perturb_both: False
+    null_char: 0
+  som:
+    grid_edge_length: 2
+    grid_dim: 2
+    learning_rate_som: 0.002265559454162194
+    sigma: 0.15378739805285147
+    num_epochs_som: 5
+    cosine: Euclidean
+
+paths:
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/MalMem/total/Obfuscated-MalMem2022_train_converted.csv'
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/MalMem/total/Obfuscated-MalMem2022_test_converted.csv'
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+
+run_training: True
+run_testing: True
+
+
+
+
+
+
+
+
+
+
+
+
+
+

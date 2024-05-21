@@ -1,0 +1,45 @@
+
+
+dataset: malmem
+som_type: fed_som
+data_class: EmbeddingsDataset
+
+optimization_params:
+  num_epochs: 20
+  batch_size: 7
+  parallel: False
+
+som_params:
+  grid_edge_length: 2
+  grid_dim: 2
+  learning_rate: 0.06337083207484664
+  sigma: 3.144906695123094
+  num_epochs_som: 5
+
+fedsom_params:
+  meta_grid_edge_length: 4
+  meta_grid_dim: 2
+  meta_learning_rate: 0.36574994811927247
+  meta_sigma: 0.2178821605388401
+  num_epochs_meta: 5
+  num_soms: 4
+
+paths:
+  # train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/MalMem/total/embeddings/Obfuscated-MalMem2022_train_embeddings.csv'
+  # test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/MalMem/total/embeddings/Obfuscated-MalMem2022_test_embeddings.csv'
+
+  train_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/MalMem/total/embeddings/malmem_train_encoder_embeddings.csv'
+  test_data_path: '../../../sandbox/data/MalwareDatasets/MalwareDatasets/MalMem/total/embeddings/malmem_test_encoder_embeddings.csv'
+
+
+
+num_samples_train: 10000000
+num_samples_test: 10000000
+num_samples_render: 2500
+num_pairs_interpolate: 1000
+
+run_training: True
+run_testing: True
+
+compute_clustering: True   
+compute_interpolations: True 

@@ -1,0 +1,6 @@
+wheel
+pytest
+black
+isort
+mypy
+pytest-sugar

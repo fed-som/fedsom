@@ -40,14 +40,14 @@ setup(
     version=get_version(),
     description="fedsom implementation",
     long_description=readme(),
-    url="https://github.com/mslawinski-cs/fedsom",
-    maintainer_email="michael.slawinski@crowdstrike.com",
+    url="https://github.com/fed-som/fedsom",
+    maintainer_email="",
     package_dir={"": "src"},
     packages=find_packages("src"),
     include_package_data=True,
     # reference our temp script from above
     package_data={
-        "deepclustering": [
+        "fedsom": [
             "VERSION",
             "requirements.txt",
             "MANIFEST.in",
